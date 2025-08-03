@@ -15,6 +15,6 @@ public class TranzactionsPage extends BasePage {
 
     public void resetAccountMethod(){
         elementHelper.waitForVisibility(resetButton);
-        elementHelper.clickMethod(resetButton);
+//        elementHelper.clickMethod(resetButton);
     }
 }

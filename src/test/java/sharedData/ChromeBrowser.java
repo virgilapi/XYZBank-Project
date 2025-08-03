@@ -32,6 +32,7 @@ public class ChromeBrowser implements Browser{
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--incognito");
+        chromeOptions.addArguments("--disable-notifications");
 //        chromeOptions.addArguments("--headless=new");
     }
 
