@@ -28,6 +28,7 @@ public class WithdrawTest extends SharedData {
 
         WithdrawlPage withdrawlPage = new WithdrawlPage(getDriver());
         withdrawlPage.withdrawMethod(withdrawValue);
+
     }
 
 }

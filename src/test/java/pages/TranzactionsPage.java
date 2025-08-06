@@ -1,5 +1,6 @@
 package pages;
 
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,7 @@ public class TranzactionsPage extends BasePage {
 
     public void resetAccountMethod(){
         elementHelper.waitForVisibility(resetButton);
-//        elementHelper.clickMethod(resetButton);
+        elementHelper.clickMethod(resetButton);
+        LoggerUtility.infoLog("The user clicks on the reset button");
     }
 }

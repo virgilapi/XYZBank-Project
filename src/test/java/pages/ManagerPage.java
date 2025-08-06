@@ -1,5 +1,6 @@
 package pages;
 
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,16 +21,19 @@ public class ManagerPage extends BasePage{
     public void interactWithAddCustomerMenu(){
         elementHelper.waitForVisibility(addCustomerButton);
         elementHelper.clickMethod(addCustomerButton);
+        LoggerUtility.infoLog("The user clicks on the add a customer button");
     }
 
     public void interactWithOpenAccountMenu(){
         elementHelper.waitForVisibility(openAccountButton);
         elementHelper.clickMethod(openAccountButton);
+        LoggerUtility.infoLog("The user clicks on the open account button");
     }
 
     public void interactWithCustomerMenu(){
         elementHelper.waitForVisibility(customersButton);
         elementHelper.clickMethod(customersButton);
+        LoggerUtility.infoLog("The user clicks on the customer button");
     }
 
 }

@@ -12,17 +12,18 @@ public class WithdrawlPage extends BasePage{
     }
 
     @FindBy(xpath = "//input[@ng-model='amount']")
-    private WebElement withdrawlBar;
+    private WebElement withdrawBar;
     @FindBy(xpath = "//button[text()='Withdraw']")
     private WebElement withdrawButton;
 
     public void withdrawMethod(String withdrawValue){
-        elementHelper.waitForVisibility(withdrawlBar);
-        elementHelper.clickMethod(withdrawlBar);
-        LoggerUtility.infoLog("The user clicks on the Withdrawl Bar");
-        elementHelper.fillMethod(withdrawlBar,withdrawValue);
+        elementHelper.waitForVisibility(withdrawBar);
+        elementHelper.javaScriptClickMehod(withdrawBar);
+        LoggerUtility.infoLog("The user clicks on the Withdraw Bar");
+        elementHelper.fillMethod(withdrawBar,withdrawValue);
         LoggerUtility.infoLog("The user enters:"+withdrawValue+" into the WithDrawl Bar");
         elementHelper.waitForVisibility(withdrawButton);
-        elementHelper.clickMethod(withdrawButton);
+        elementHelper.javaScriptClickMehod(withdrawButton);
+        LoggerUtility.infoLog("The user clicks on the withdraw button");
     }
 }
