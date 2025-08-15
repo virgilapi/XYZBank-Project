@@ -3,12 +3,13 @@ package tests;
 import facade.CustomerFacade;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
+import testdata.TestData;
 
 public class CustomerFacadeTest extends SharedData {
 
-    String elementValue = "Hermoine Granger";
-    String depositValue = "200";
-    String withdrawValue = "100";
+    String elementValue = TestData.get("elementValue");
+    String depositValue = TestData.get("depositValue");
+    String withdrawValue = TestData.get("withdrawValue");
 
     @Test
     public void testMethod(){
