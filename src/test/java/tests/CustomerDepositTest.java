@@ -6,11 +6,12 @@ import pages.DepositPage;
 import pages.IndexPage;
 import pages.LoginPage;
 import sharedData.SharedData;
+import testdata.TestData;
 
 public class CustomerDepositTest extends SharedData {
 
-    String depositValue = "2300";
-    String userName = "Hermoine Granger";
+    String elementValue = TestData.get("elementValue");
+    String depositValue = TestData.get("depositValue");
 
     @Test
     public void testMethod(){
@@ -18,7 +19,7 @@ public class CustomerDepositTest extends SharedData {
         indexPage.interactWithCustomerMenu();
 
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginMethod(userName);
+        loginPage.loginMethod(elementValue);
 
         CustomerPage customerPage = new CustomerPage(getDriver());
         customerPage.interactWithDepositMenu();

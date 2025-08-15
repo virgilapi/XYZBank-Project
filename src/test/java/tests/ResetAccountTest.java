@@ -3,12 +3,13 @@ package tests;
 import org.testng.annotations.Test;
 import pages.*;
 import sharedData.SharedData;
+import testdata.TestData;
 
 public class ResetAccountTest extends SharedData {
 
-    String userName = "Hermoine Granger";
-    String depositValue = "2300";
-    String withdrawValue = "1300";
+    String elementValue = TestData.get("elementValue");
+    String depositValue = TestData.get("depositValue");
+    String withdrawValue = TestData.get("withdrawValue");
 
     @Test
     public void testMethod() {
@@ -17,7 +18,7 @@ public class ResetAccountTest extends SharedData {
         indexPage.interactWithCustomerMenu();
 
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginMethod(userName);
+        loginPage.loginMethod(elementValue);
 
         CustomerPage customerPage = new CustomerPage(getDriver());
         customerPage.interactWithDepositMenu();

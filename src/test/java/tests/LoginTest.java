@@ -4,10 +4,11 @@ import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.LoginPage;
 import sharedData.SharedData;
+import testdata.TestData;
 
 public class LoginTest extends SharedData {
 
-    String userName = "Hermoine Granger";
+    String userName = TestData.get("elementValue");
 
     @Test
     public void testMethod(){
