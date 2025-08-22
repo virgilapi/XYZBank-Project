@@ -11,7 +11,7 @@ public class ResetAccountTest extends SharedData {
     String depositValue = TestData.get("depositValue");
     String withdrawValue = TestData.get("withdrawValue");
 
-    @Test
+    @Test(groups = {"@Regression","@Reset"})
     public void testMethod() {
 
         IndexPage indexPage = new IndexPage(getDriver());

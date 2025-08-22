@@ -11,7 +11,7 @@ public class CreateCustomerTest extends SharedData {
     String userValue = "Harry Potter";
     String currencyValue = "Pound";
 
-    @Test
+    @Test(groups = {"@Regression","@CreateCustomer"})
     public void testMethod(){
 
         IndexPage indexPage = new IndexPage(getDriver());

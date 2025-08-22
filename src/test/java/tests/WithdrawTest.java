@@ -11,7 +11,7 @@ public class WithdrawTest extends SharedData {
     String depositValue = TestData.get("depositValue");
     String withdrawValue = TestData.get("withdrawValue");
 
-    @Test
+    @Test(groups = {"@Regression","@Sanity"})
     public void testMethod(){
         IndexPage indexPage = new IndexPage(getDriver());
         indexPage.interactWithCustomerMenu();

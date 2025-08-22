@@ -12,7 +12,7 @@ public class AddCustomerTest extends SharedData {
     String lastNameValue = "Costea";
     String postalCodeValue = "610234";
 
-    @Test
+    @Test(groups = {"@Regression","@Sanity"})
     public void testMethod(){
         IndexPage indexPage = new IndexPage(getDriver());
         indexPage.interactWithManagerMenu();

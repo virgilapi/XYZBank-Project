@@ -11,7 +11,7 @@ public class CustomerFacadeTest extends SharedData {
     String depositValue = TestData.get("depositValue");
     String withdrawValue = TestData.get("withdrawValue");
 
-    @Test
+    @Test(groups = {"@Regression","@FacadeTest"})
     public void testMethod(){
         CustomerFacade customerFacade = new CustomerFacade(getDriver());
         customerFacade.customer_Login_Depozit_Withdrawl(elementValue,depositValue,withdrawValue);

@@ -13,7 +13,7 @@ public class CustomerDepositTest extends SharedData {
     String elementValue = TestData.get("elementValue");
     String depositValue = TestData.get("depositValue");
 
-    @Test
+    @Test(groups = {"@Regression","@Sanity"})
     public void testMethod(){
         IndexPage indexPage = new IndexPage(getDriver());
         indexPage.interactWithCustomerMenu();

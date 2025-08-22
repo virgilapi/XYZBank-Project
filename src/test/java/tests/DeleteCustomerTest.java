@@ -10,7 +10,7 @@ public class DeleteCustomerTest extends SharedData {
 
     String searchValue = "Harry";
 
-    @Test
+    @Test(groups = {"@Regression","@DeleteCustomer"})
     public void testMethod(){
 
         IndexPage indexPage = new IndexPage(getDriver());

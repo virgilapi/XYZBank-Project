@@ -10,7 +10,7 @@ public class LoginTest extends SharedData {
 
     String userName = TestData.get("elementValue");
 
-    @Test
+    @Test(groups = {"@Regression","@Sanity"})
     public void testMethod(){
         IndexPage indexPage = new IndexPage(getDriver());
         indexPage.interactWithCustomerMenu();
