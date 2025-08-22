@@ -12,11 +12,11 @@ on:
           - 'Chrome'
           - 'Edge'
           - 'Firefox'
-        threads:
-          description: 'Choose number of Threads: (1-4)'
-          required: true
-          default: 1
-          type: number
+      threads:
+        description: 'Choose number of Threads: (1-4)'
+        required: true
+        default: 1
+        type: number
           
 jobs:
   build:
