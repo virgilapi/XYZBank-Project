@@ -15,7 +15,7 @@ public class LoginTest extends SharedData {
         IndexPage indexPage = new IndexPage(getDriver());
         indexPage.interactWithCustomerMenu();
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver()).get();
         loginPage.loginMethod(userName);
     }
 }

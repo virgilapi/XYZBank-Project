@@ -2,12 +2,15 @@ package sharedData;
 
 import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import testdata.TestData;
 
 public class SharedData {
 
+    private String url = TestData.get("url");
     private WebDriver driver;
     private String browser;
 

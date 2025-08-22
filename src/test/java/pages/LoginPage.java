@@ -1,14 +1,42 @@
 package pages;
 
 import loggerUtility.LoggerUtility;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
 
 public class LoginPage extends BasePage{
 
     public LoginPage(WebDriver driver) {
         super(driver);
+    }
+
+    @Override
+    public void isLoaded()  {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+            wait.until(ExpectedConditions.visibilityOf(userDropDown));
+            ExpectedConditions.stalenessOf(userDropDown);
+            Assert.assertTrue(userDropDown.isDisplayed(),"The dropdown is not displayed");
+
+            if (userDropDown.isSelected()){
+                wait.until(ExpectedConditions.visibilityOf(loginButton));
+                ExpectedConditions.stalenessOf(loginButton);
+                Assert.assertTrue(loginButton.isDisplayed(),"The login button is not displayed");
+            }
+
+        } catch (TimeoutException e) {
+            throw new AssertionError("The login button did not load");
+        }
+
+
     }
 
     @FindBy(id = "userSelect")
