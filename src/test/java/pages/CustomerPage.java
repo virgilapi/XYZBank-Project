@@ -33,7 +33,7 @@ public class CustomerPage extends BasePage{
 
     public void interactWithWithdrawlMenu(){
         elementHelper.waitForVisibility(withdrawlButton);
-        elementHelper.clickMethod(withdrawlButton);
+        elementHelper.javaScriptClickMehod(withdrawlButton);
         LoggerUtility.infoLog("The user interacts with the withdrawl menu");
     }
 
