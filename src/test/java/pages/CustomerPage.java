@@ -21,7 +21,7 @@ public class CustomerPage extends BasePage{
 
     public void interactWithTransactionsMenu(){
         elementHelper.waitForVisibility(tranzactionsButton);
-        elementHelper.clickMethod(tranzactionsButton);
+        elementHelper.javaScriptClickMehod(tranzactionsButton);
         LoggerUtility.infoLog("The user interacts with the transactions menu");
     }
 

@@ -16,7 +16,7 @@ public class TranzactionsPage extends BasePage {
 
     public void resetAccountMethod(){
         elementHelper.waitForVisibility(resetButton);
-        elementHelper.clickMethod(resetButton);
+        elementHelper.javaScriptClickMehod(resetButton);
         LoggerUtility.infoLog("The user clicks on the reset button");
     }
 }

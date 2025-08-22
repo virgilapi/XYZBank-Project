@@ -1,6 +1,7 @@
 package facade;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import pages.*;
 
 public class CustomerFacade {
@@ -19,6 +20,7 @@ public class CustomerFacade {
         customerPage = new CustomerPage(driver);
         depositPage = new DepositPage(driver);
         withdrawlPage = new WithdrawlPage(driver);
+        PageFactory.initElements(driver,this);
     }
 
     public void customer_Login_Depozit_Withdrawl(String elementValue,String depositValue,String withdrawValue){
