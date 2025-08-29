@@ -21,19 +21,18 @@ public class LoginPage extends BasePage{
     public void isLoaded()  {
 
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.visibilityOf(userDropDown));
+            elementHelper.waitForVisibility(userDropDown);
             ExpectedConditions.stalenessOf(userDropDown);
             Assert.assertTrue(userDropDown.isDisplayed(),"The dropdown is not displayed");
 
             if (userDropDown.isSelected()){
-                wait.until(ExpectedConditions.visibilityOf(loginButton));
+                elementHelper.waitForVisibility(loginButton);
                 ExpectedConditions.stalenessOf(loginButton);
                 Assert.assertTrue(loginButton.isDisplayed(),"The login button is not displayed");
             }
 
         } catch (TimeoutException e) {
-            throw new AssertionError("The login button did not load");
+            throw new AssertionError("The login page is not loaded");
         }
 
 

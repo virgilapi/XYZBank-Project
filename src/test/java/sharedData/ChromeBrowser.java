@@ -33,7 +33,7 @@ public class ChromeBrowser implements Browser{
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--incognito");
         chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--headless=new");
+//        chromeOptions.addArguments("--headless=new");
     }
 
     public WebDriver getDriver() {
